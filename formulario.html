@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+
+    <style>
+        body{
+            background-color: #121212;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container{
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 15px;
+            width: 400px;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+        }
+
+        h1,h2{
+            text-align: center;
+        }
+
+        input, select, textarea{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: none;
+            background-color: #2c2c2c;
+            color: white;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"]{
+            width: auto;
+        }
+
+        input[type="submit"],
+        input[type="reset"]{
+            background-color: #4CAF50;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover{
+            background-color: #45a049;
+        }
+
+        label{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Formulário de Cadastro</h1>
+    <h2>Início de Formulário</h2>
+
+    <form action="index.html" method="get">
+
+        <label>Telefone:</label>
+        <input type="text" name="telefone" size="20" maxlength="15"/>
+
+        <label>Email:</label>
+        <input type="text" name="Email" required/>
+
+        <input type="reset" value="Limpar"/>
+
+        <label>Informe seu nome completo:</label>
+        <input type="text" name="nome" id="nome">
+
+        <label>Selecione o tipo de combustível:</label><br/>
+
+        <input type="radio" name="gas" value="gas"/> Gasolina<br/>
+        <input type="radio" name="gas" value="alc"/> Álcool<br/>
+        <input type="radio" name="gas" value="gnv"/> GNV<br/>
+        <input type="radio" name="gas" value="flex"/> Flex<br/><br/>
+
+        <label>Tipos disponíveis:</label><br/>
+
+        <input type="checkbox" name="gas"/> Gasolina<br/>
+        <input type="checkbox" name="alc"/> Álcool<br/>
+        <input type="checkbox" name="gnv"/> GNV<br/>
+        <input type="checkbox" name="flex"/> Flex<br/><br/>
+
+        <label>Escolha uma fabricante:</label>
+
+        <select name="car" id="car">
+            <option value="fiat">Fiat</option>
+            <option value="hyundai">Hyundai</option>
+            <option value="BYD">BYD</option>
+            <option value="honda">Honda</option>
+        </select>
+
+        <label>Sugestões:</label>
+
+        <textarea name="dica" id="dica" cols="30" rows="5"></textarea>
+
+        <input type="submit" value="Enviar"/>
+
+    </form>
+
+</div>
+
+</body>
+</html>
